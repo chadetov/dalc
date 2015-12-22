@@ -176,13 +176,13 @@
 
 				$this->where_clauses[] = array('statement' => $this->secure($column_name).' '.$this->secure($operator).' '.$this->secure($str), 'cluster' => $cluster);
 		    }
-	        else if($operator == '<' || $operator == '>'){
+	        elseif($operator == '<' || $operator == '>'){
 	            $this->where_clauses[] = array('statement' => $this->secure($column_name).' '.$operator.' \''.$this->secure($value).'\'', 'cluster' => $cluster);
 	        }
-		    else if($operator == 'IS'){
+		    elseif($operator == 'IS'){
 				$this->where_clauses[] = array('statement' => $this->secure($column_name).' '.$this->secure($operator).' '.$this->secure($value), 'cluster' => $cluster);
 		    }
-		    else if($column_name && $operator){
+		    elseif($column_name && $operator){
 				$this->where_clauses[] = array('statement' => $this->secure($column_name).' '.$this->secure($operator).' \''.$this->secure($value).'\'', 'cluster' => $cluster);
 		    }
 
@@ -247,11 +247,6 @@
 		}
 
 		private function secure($var){
-		    //$var = htmlspecialchars(stripslashes($var));
-		    // following line is removed to allow script keyword in book names.
-		    //$var = str_ireplace("script", "blocked", $var);
-		    //$var = mysql_escape_string($var);
-
 			$var = str_replace('\'', '', $var);
 			$var = str_replace('<script', '<', $var);
 
@@ -299,8 +294,6 @@
 	    public function having($condition){
 	            
 	        if($condition){
-				//$condition = $this->secure($condition);
-
 				if(!isset($this->having)){
 				    $this->having = ' HAVING '.$condition;
 				}
@@ -326,12 +319,12 @@
 
 		public function rollback(){
 		    mysql_query('ROLLBACK');
-		    mysql_query('SET AUTOCOMMIT = 1'); // commit'den sonra gelebilecek normal sorgular icin
+		    mysql_query('SET AUTOCOMMIT = 1'); 
 		}
 
 		public function commit(){
 		    mysql_query('COMMIT');
-		    mysql_query('SET AUTOCOMMIT = 1'); // commit'den sonra gelebilecek normal sorgular icin
+		    mysql_query('SET AUTOCOMMIT = 1');
 		}
 
 		public function optimize($table_name){
