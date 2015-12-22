@@ -1,0 +1,21 @@
+{
+	"name": "chadetov/dalc",
+	"description": "a database class to simplify data movements",
+	"vertion": "0.0.1-dev",
+	"type": "project",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Onur Buyukceran",
+            "email": "onur.buyukceran@gmail.com",
+            "homepage": "http://buyukceran.com",
+            "role": "Developer"
+        }
+    ],
+     "support": {
+        "email": "support@buyukceran.com",
+        "irc": "irc://irc.freenode.org/dalc"
+    },
+
+
+}
