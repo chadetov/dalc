@@ -1,9 +1,10 @@
-<?
-	require_once('config.php');
+<?php
+	
+	namespace Dalc;
 
     class MySQLDalc implements Dalc{
 
-		private $is_debug = false;
+		private $is_debug = true;
 		private $table_name;
 		private $insert_columns; // column1, column2, column3
 		private $insert_values; // value1, value2, value3
@@ -13,7 +14,9 @@
 		private $where_clauses;
 		private $set_clause;
 
-		function __construct(){}
+		function __construct(){
+			$this->connect();
+		}
 
 		function __destruct(){}
 
@@ -24,7 +27,7 @@
 
 		public function connect()
 		{
-			$dbp = json_decode(file_get_contents('mysql.json');
+			require_once('config.php');
 
 		    $link = mysql_connect($dbp->server, $dbp->user, $dbp->password);
 		    if (!$link) {
@@ -206,7 +209,7 @@
 
 		private function run($sql){
 
-			$or = new stdClass();
+			$or = new \stdClass();
 
 		    if($this->is_debug){
 				$or->sql = $sql;
