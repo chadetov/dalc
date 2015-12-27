@@ -1,4 +1,6 @@
 <?
+	require_once('config.php');
+
     class MySQLDalc implements Dalc{
 
 		private $is_debug = false;
