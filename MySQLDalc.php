@@ -1,6 +1,8 @@
 <?php
-	
+
 	namespace Dalc;
+
+	require_once('Dalc.php');
 
     class MySQLDalc implements Dalc{
 
@@ -107,7 +109,7 @@
 
 				$i=0;
 				while ($row = mysql_fetch_object($result->set)){
-					$list[$i] = new stdClass();
+					$list[$i] = new \stdClass();
 				    foreach($fieldsname as $fieldname){
 					    $list[$i]->$fieldname = $row->$fieldname;
 				    }
