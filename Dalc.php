@@ -1,4 +1,6 @@
 <?php 
+	
+	namespace Dalc;
 
 	interface Dalc{
 		public function connect();
@@ -20,3 +22,5 @@
 		public function commit();
 		public function optimize($table_name);
 	}
+
+?>
