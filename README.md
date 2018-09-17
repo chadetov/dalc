@@ -1,4 +1,19 @@
-# dalc
+# Database Access Layer Component
 
-[![Join the chat at https://gitter.im/chadetov/dalc](https://badges.gitter.im/chadetov/dalc.svg)](https://gitter.im/chadetov/dalc?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-data access layer component
+### Tutorial
+* [Sample DB](readme/README.sampledb.md)
+* [Create](readme/README.create.md)
+* [Read](readme/README.read.md)
+* [Update](readme/README.update.md)
+* [Delete](readme/README.delete.md)
+* [Transaction](readme/README.transaction.md)
+
+
+### Use of Views
+
+
+### Interface
+
+
+### The Philosophy
+
