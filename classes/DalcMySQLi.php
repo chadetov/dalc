@@ -1,5 +1,5 @@
 <?
-	namespace Entity;
+    namespace Entity;
 
     require_once('dba_interface.php');
     require_once(dirname(__FILE__).'/../phpspec.php');
@@ -19,7 +19,7 @@
 		private $insert_values; // value1, value2, value3
 		private $order_by;
 		private $group_by;
-	    private $having;
+    	        private $having;
 		private $where_clauses;
 		private $set_clause;
 		private $php_spec;
@@ -91,7 +91,7 @@
 		    unset($this->insert_values);
 		    unset($this->order_by);
 		    unset($this->group_by);
-            unset($this->having);
+                unset($this->having);
 		    unset($this->where_clauses);
 		    unset($this->set_clause);
 		    unset($this->affected_rows);
@@ -116,7 +116,7 @@
 		}
 
 		public function get($columns, $limit){
-			// changed before v.1.4 because we want to send " character in SELECT queries
+		    // changed before v.1.4 because we want to send " character in SELECT queries
 		    //$column = $this->secure($column);
 		    $limit = $this->secure($limit);
 
@@ -125,14 +125,14 @@
 		    $where = $this->create_where_clause();
 
 		    if(!isset($this->order_by)){
-				$this->order_by = '';
+			$this->order_by = '';
 		    }
 
 		    if(!isset($this->group_by)){
 				$this->group_by = '';
 		    }
 
-            if(!isset($this->having)){
+                    if(!isset($this->having)){
 				$this->having = '';
 		    }
 
