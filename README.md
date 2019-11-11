@@ -1,7 +1,6 @@
 
 
 # Database Access Layer Component
-This is.
 
 ### Setup
 
