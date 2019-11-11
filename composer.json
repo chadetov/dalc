@@ -1,7 +1,7 @@
 {
 	"name": "chadetov/dalc",
 	"description": "a database class to simplify data movements",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"type": "project",
     "license": "GPL-3.0+",
     "authors": [
